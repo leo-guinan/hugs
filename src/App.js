@@ -9,8 +9,6 @@ import {ReactComponent as SupportHeart} from './support_heart_01.svg'
 import './App.scss';
 
 function App() {
-  const iOSUrl = '';
-  const androidUrl = '';
 
 
   return (

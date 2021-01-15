@@ -2,8 +2,9 @@ import {ReactComponent as Phone} from './phone__01.svg';
 import {ReactComponent as PlayStoreButton} from './google-play-badge.svg'
 import {ReactComponent as AppStoreButton} from './app-store-badge.svg'
 import {ReactComponent as HugsLogo} from './hug_logo_01.svg'
-import {ReactComponent as LeftArm} from './Arm_L.svg'
-import {ReactComponent as RightArm} from './Arm_R.svg'
+import ImageMapper from 'react-image-mapper';
+import LeftArm  from './components/left-arm-map'
+import RightArm from './components/right-arm-map'
 
 import {ReactComponent as SupportHeart} from './support_heart_01.svg'
 import './App.scss';
@@ -13,6 +14,16 @@ function App() {
 
   return (
     <section>
+      <map name="LeftArmMap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm" />
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm" />
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm" />
+      </map>
+      <map name="RightArmMap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm" />
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm" />
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm" />
+      </map>
       <section className="container">
 
       
@@ -30,11 +41,15 @@ function App() {
                 <p>Simply launch the application and hold your phone to your heart to actually feel the sensation of a hug through vibrations in your phone.</p>
                 <p>Or share a hug remotely by clicking “Send a Hug” and share it! The receiver clicks on the message and holds the phone to their heart to feel the hug.</p>
               </div>
-              <div className="column is-align-items-flex-start">
+              <div className="column sidebar">
                 <figure className="image phone ">
                   <Phone />
-                  <AppStoreButton />
-                  <PlayStoreButton />
+                  <a href="https://apps.apple.com/us/app/id1520736562">
+                    <AppStoreButton />
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=care.hugs.app">
+                    <PlayStoreButton />
+                  </a>
                 
                 </figure>
               </div>
@@ -44,10 +59,10 @@ function App() {
       </section>
       <section>   
       <div className='level'>
-        <LeftArm className="level-item" />
+        <LeftArm/>
                 
         <SupportHeart className="is-align-content-center"/>
-        <RightArm className="level-item" />
+        <RightArm />
       </div>
     </section>
   </section>

@@ -1,35 +1,18 @@
-import {ReactComponent as Phone} from './phone__01.svg';
-import {ReactComponent as PlayStoreButton} from './google-play-badge.svg'
-import {ReactComponent as AppStoreButton} from './app-store-badge.svg'
-import {ReactComponent as HugsLogo} from './hug_logo_01.svg'
-import ImageMapper from 'react-image-mapper';
-import LeftArm  from './components/left-arm-map'
-import RightArm from './components/right-arm-map'
-
-import {ReactComponent as SupportHeart} from './support_heart_01.svg'
+import {ReactComponent as Phone} from './images/phone__01.svg';
+import {ReactComponent as PlayStoreButton} from './images/google-play-badge.svg'
+import {ReactComponent as AppStoreButton} from './images/app-store-badge.svg'
+import {ReactComponent as HugsLogo} from './images/hug_logo_01.svg'
+import {ReactComponent as LeftArmImage} from './images/Arm_L_with_Logos.svg'
+import {ReactComponent as RightArmImage} from './images/Arm_R_with_Logos.svg'
+import {ReactComponent as SupportHeart} from './images/support_heart_01.svg'
 import './App.scss';
 
 function App() {
-
-
   return (
     <section>
-      <map name="LeftArmMap">
-        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm" />
-        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm" />
-        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm" />
-      </map>
-      <map name="RightArmMap">
-        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm" />
-        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm" />
-        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm" />
-      </map>
       <section className="container">
-
-      
-            <div className="columns">
-              
-              <div className="column is-two-thirds">
+        <div className="columns">
+            <div className="column is-two-thirds">
                 <HugsLogo className='logo'/>
                 <p>On April 10, 2020 members of the Columbus College of Art &amp; Design Master of Design Program conducted a series of interviews with members of  Star House (An agency that operates Central Ohio’s only drop-in center for youth, age 14-24, who are experiencing homelessness. </p>
                 <p>In these interviews they addressed the increased fatigue and morale of social workers and staff of the Star House whose work with homeless youth is affected by the pandemic. </p>
@@ -49,8 +32,7 @@ function App() {
                   </a>
                   <a href="https://play.google.com/store/apps/details?id=care.hugs.app">
                     <PlayStoreButton />
-                  </a>
-                
+                  </a>                
                 </figure>
               </div>
                 
@@ -58,14 +40,13 @@ function App() {
                 
       </section>
       <section>   
-      <div className='level'>
-        <LeftArm/>
-                
-        <SupportHeart className="is-align-content-center"/>
-        <RightArm />
-      </div>
+        <div className='level'>
+          <LeftArmImage className="level-item"/>                
+          <SupportHeart className="is-align-content-center"/>
+          <RightArmImage className="level-item"/>
+        </div>
+      </section>
     </section>
-  </section>
   );
 }
 
